@@ -44,3 +44,29 @@ for (let i = 0; i < team.length; i++) {
     const person = team[i];
     console.log(person);
 }
+
+//stampare le stesse informazioni su dom sotto forma di stringhe
+
+//funzione per stampare sulla DOM
+function printToDOM(id, text) {
+    let content = document.getElementById(id).innerHTML
+    content += text
+    document.getElementById(id).innerHTML = content
+}
+
+//prendiamo membri dalla dom
+let membriDom = document.getElementById('membri')
+console.log(membriDom);
+
+//ciclo per stampare nella DOM tutti gli oggetti
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    const htmlPrint =  `
+    <div class='card col-4'>
+        <img class='card-img' src="./img/${member.foto}">
+        <h3>${member.nome}</h3>
+        <h3>${member.ruolo}</h3>
+    </div>
+    `
+    membriDom.innerHTML += htmlPrint
+}
