@@ -62,7 +62,7 @@ console.log(membriDom);
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
     const htmlPrint =  `
-    <div class='card col-4'>
+    <div class='card col-4 p-0'>
         <img class='card-img' src="./img/${member.foto}">
         <h3>${member.nome}</h3>
         <h3>${member.ruolo}</h3>
